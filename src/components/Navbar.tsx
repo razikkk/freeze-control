@@ -19,12 +19,14 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <Snowflake className="h-7 w-7 text-accent" strokeWidth={2.5} />
-          <span className="text-xl font-bold tracking-tight text-primary" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            FreezeControl
-          </span>
-        </Link>
+        <Link to="/" className="flex items-center">
+  <img 
+    src="/logo.jpg" // Replace with your actual logo path (e.g., /public/logo.png)
+    alt="FreezeControl Logo" 
+    className="h-14 w-auto object-contain" 
+    // If you need an exact pixel size, use: style={{ height: '40px' }}
+  />
+</Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
