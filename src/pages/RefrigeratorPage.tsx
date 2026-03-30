@@ -3,7 +3,7 @@ import { Wrench, Settings, SprayCan, PackagePlus, DoorOpen, DoorClosed, Snowflak
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import fridgeImg from "@/assets/refrigerator-service.jpg";
+import fridgeImg from "@/assets/fridge.jpg";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };

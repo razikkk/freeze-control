@@ -3,7 +3,7 @@ import { Wrench, Settings, SprayCan, PackagePlus, Wind, Building2, Factory, Cpu,
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import acImg from "@/assets/ac-service.jpg";
+import acImg from "@/assets/ac.jpg";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };

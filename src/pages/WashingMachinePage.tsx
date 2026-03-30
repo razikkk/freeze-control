@@ -3,7 +3,7 @@ import { Wrench, Settings, SprayCan, PackagePlus, RotateCw, Gauge } from "lucide
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import wmImg from "@/assets/washing-machine-service.jpg";
+import wmImg from "@/assets/washing.avif";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };

@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center">
   <img 
-    src="/logo.jpg" // Replace with your actual logo path (e.g., /public/logo.png)
+    src="/fc.png" // Replace with your actual logo path (e.g., /public/logo.png)
     alt="FreezeControl Logo" 
     className="h-14 w-auto object-contain" 
     // If you need an exact pixel size, use: style={{ height: '40px' }}
