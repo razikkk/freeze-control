@@ -5,6 +5,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import fridgeImg from "@/assets/fridge.jpg";
 
+import singleDoorImg from "@/assets/single-door.jpg"; // Replace with your image paths
+import doubleDoorImg from "@/assets/double-door.avif";
+import deepFreezerImg from "@/assets/deep-freeze.webp";
+
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
@@ -16,9 +20,21 @@ const serviceTypes = [
 ];
 
 const fridgeTypes = [
-  { icon: DoorOpen, name: "Single Door", desc: "Compact single door refrigerators ideal for small families and individual use." },
-  { icon: DoorClosed, name: "Double Door", desc: "Frost-free and direct cool double door refrigerators for medium to large families." },
-  { icon: Snowflake, name: "Deep Freezer", desc: "Commercial and residential deep freezer units for bulk storage and preservation." },
+  { 
+    image: singleDoorImg, // Switched 'icon' to 'image'
+    name: "Single Door", 
+    desc: "Compact single door refrigerators ideal for small families and individual use." 
+  },
+  { 
+    image: doubleDoorImg, 
+    name: "Double Door", 
+    desc: "Frost-free and direct cool double door refrigerators for medium to large families." 
+  },
+  { 
+    image: deepFreezerImg, 
+    name: "Deep Freezer", 
+    desc: "Commercial and residential deep freezer units for bulk storage and preservation." 
+  },
 ];
 
 const RefrigeratorPage = () => (
@@ -82,28 +98,50 @@ const RefrigeratorPage = () => (
       </div>
     </section>
 
-    <section className="py-20 lg:py-28">
-      <div className="container mx-auto px-4 lg:px-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-14">
-          <motion.p variants={fadeUp} className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">What We Cover</motion.p>
-          <motion.h2 variants={fadeUp} className="text-3xl lg:text-4xl font-bold text-foreground">All Refrigerator Types</motion.h2>
-        </motion.div>
+    <section className="py-20 lg:py-28 bg-secondary/20">
+  <div className="container mx-auto px-4 lg:px-8">
+    
+    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-16">
+      <motion.p variants={fadeUp} className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+        What We Cover
+      </motion.p>
+      <motion.h2 variants={fadeUp} className="text-4xl lg:text-5xl font-bold text-foreground">
+        All Refrigerator Types
+      </motion.h2>
+    </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-3 gap-8">
-          {fridgeTypes.map((f) => (
-            <motion.div key={f.name} variants={fadeUp}>
-              <Card className="h-full border-border/50 hover:shadow-md transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <f.icon className="h-10 w-10 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-foreground mb-3">{f.name}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{f.desc}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {fridgeTypes.map((f, i) => (
+        <motion.div key={f.name} variants={fadeUp}>
+          <Card className="h-full overflow-hidden border border-border/50 bg-card rounded-xl group hover:shadow-2xl hover:border-accent/10 transition-all duration-300">
+            {/* Image Container: Premium aspect ratio and hover effect */}
+            <div className="aspect-[4/3] overflow-hidden">
+              <img 
+                src={f.image} 
+                alt={f.name} 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+              />
+            </div>
+            
+            {/* Content Container: Centered text with padding */}
+            <CardContent className="p-8 text-center relative">
+              
+              {/* Premium small accent dot on hover */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+              
+              <h3 className="text-2xl font-bold text-foreground mb-3 leading-tight">
+                {f.name}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-base">
+                {f.desc}
+              </p>
+            </CardContent>
+          </Card>
         </motion.div>
-      </div>
-    </section>
+      ))}
+    </motion.div>
+  </div>
+</section>
 
     <Footer />
   </div>

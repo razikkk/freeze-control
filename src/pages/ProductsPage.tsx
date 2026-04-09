@@ -7,20 +7,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import imgCopperPipe from "@/assets/product-copper-pipe.jpg";
+import imgCopperPipe from "@/assets/copper-pipe.webp";
 import imgRefrigeratorGas from "@/assets/product-refrigerator-gas.jpg";
 import imgOutdoorStand from "@/assets/product-outdoor-stand.jpg";
-import imgStabilizer from "@/assets/product-stabilizer.jpg";
+import imgStabilizer from "@/assets/stablizer.jpg";
 import imgAspinPump from "@/assets/product-aspin-pump.jpg";
 import imgIndoorUnits from "@/assets/product-indoor-units.jpg";
-import imgCableWire from "@/assets/product-cable-wire.jpg";
-import imgVacuumPump from "@/assets/product-vacuum-pump.jpg";
+import imgCableWire from "@/assets/cable-wire.webp";
+import imgVacuumPump from "@/assets/vaccum-pump.jpg";
 import imgFoam from "@/assets/product-foam.jpg";
 import imgFloorStand from "@/assets/product-floor-stand.jpg";
 import imgAcRemote from "@/assets/product-ac-remote.jpg";
 import imgR290Gas from "@/assets/product-r290-gas.jpg";
 import imgLpgCylinder from "@/assets/product-lpg-cylinder.jpg";
-import imgCapacitors from "@/assets/product-capacitors.jpg";
+import imgCapacitors from "@/assets/capacitor.webp";
+import acGas from "@/assets/ac-gas.png";
+
 import { Link } from "react-router-dom";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
@@ -41,6 +43,8 @@ const products = [
   { name: "R 290 Gas", img: imgR290Gas },
   { name: "LPG Cylinders (Butane Gas)", img: imgLpgCylinder },
   { name: "Capacitors", img: imgCapacitors },
+  { name: "ac Gas", img: acGas },
+
 ];
 
 const ProductsPage = () => {

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroBg from "@/assets/hero-bg.jpg";
-import acImg from "@/assets/ac-service.jpg";
+import acImg from "@/assets/ac.jpg";
 import fridgeImg from "@/assets/refrigerator-service.jpg";
 import wmImg from "@/assets/washing-machine-service.jpg";
 
