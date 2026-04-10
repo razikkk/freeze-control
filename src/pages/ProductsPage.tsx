@@ -8,20 +8,23 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import imgCopperPipe from "@/assets/copper-pipe.webp";
-import imgRefrigeratorGas from "@/assets/product-refrigerator-gas.jpg";
+import imgRefrigeratorGas from "@/assets/Refridgerator Gas.png";
 import imgOutdoorStand from "@/assets/product-outdoor-stand.jpg";
 import imgStabilizer from "@/assets/stablizer.jpg";
-import imgAspinPump from "@/assets/product-aspin-pump.jpg";
+import imgAspinPump from "@/assets/Aspin Pump.png";
 import imgIndoorUnits from "@/assets/product-indoor-units.jpg";
-import imgCableWire from "@/assets/cable-wire.webp";
+import imgCableWire from "@/assets/Cable Wire 1.png";
 import imgVacuumPump from "@/assets/vaccum-pump.jpg";
-import imgFoam from "@/assets/product-foam.jpg";
+import imgFoam from "@/assets/Super loan Foam .png";
 import imgFloorStand from "@/assets/product-floor-stand.jpg";
 import imgAcRemote from "@/assets/product-ac-remote.jpg";
 import imgR290Gas from "@/assets/product-r290-gas.jpg";
 import imgLpgCylinder from "@/assets/product-lpg-cylinder.jpg";
 import imgCapacitors from "@/assets/capacitor.webp";
 import acGas from "@/assets/ac-gas.png";
+import ToolKit from "@/assets/_KIt 1.png";
+import Compressor from "@/assets/_compressor.png";
+
 
 import { Link } from "react-router-dom";
 
@@ -44,6 +47,9 @@ const products = [
   { name: "LPG Cylinders (Butane Gas)", img: imgLpgCylinder },
   { name: "Capacitors", img: imgCapacitors },
   { name: "ac Gas", img: acGas },
+  { name: "Tool Kit", img: ToolKit },
+  { name: "Compressor", img: Compressor },
+
 
 ];
 
